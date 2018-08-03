@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="\Users\Colby\Documents\Messenger\Client\css\style.css">
+    <script src="\Users\Colby\Documents\Messenger\Client\lib\angular.js"></script>
+    <script src="\Users\Colby\Documents\Messenger\node_modules\socket.io\lib\socket.js"></script>
+    <script>
+        var socket = io.connect('http://localhost');
+    </script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js">
+    </script>
+    <script src="\Users\Colby\Documents\Messenger\Client\js\app.js"></script>
+  </head>
+  <body ng-controller="mainController">
+    <ul id="messages"></ul>
+    <div>
+      <input id="m" ng-model="message" autocomplete="off" />
+      <button ng-click="send()">Send</button>
+    </div>
+  </body>
+</html>
